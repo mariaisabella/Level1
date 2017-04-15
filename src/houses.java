@@ -15,7 +15,7 @@ static void flatBuilding(int height, int r, int g, int b) {
 	rob.turn(90);
 	rob.move(height);
 	rob.turn(-90);
-	rob.setPenColor(Green);
+	rob.setPenColor(0,255,0);
 	rob.move(100);
 
 }	
