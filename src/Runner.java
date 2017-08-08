@@ -1,36 +1,40 @@
 public class Runner {
-	String name;
-	int speed;
-	int bibNumber;
-	static int count;
-	static String location = "Miami";
-	static String startTime = "4:57";
+	private String name;
+	private int speed;
+	private int bibNumber;
+	private static int count;
+	private static String location = "San Diego";
+	private static String startTime = "6:00 am";
 
-	public Runner(String name, int speed){
-		count = count+1;
-		bibNumber = 1000+count;
-	}
-	      
-	public void setName(String name){
+	public Runner(String name, int speed) {
+		count = count + 1;
+		bibNumber = 999 + count;
 		this.name = name;
 	}
-	public String getName(){
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getName() {
 		return name;
 	}
-	public void setSpeed(int speed){
+
+	public static void setCity(String newCity) {
+		location = newCity;
+	}
+
+	public void setSpeed(int speed) {
 		this.speed = speed;
 	}
-	public int getSpeed(){
+
+	public int getSpeed() {
 		return speed;
 	}
-	public void describeRunner() {
-		System.out.println("Runner " + name + " is running in " + location + " at " + startTime + ". His bib number is " + bibNumber + ".");
-	}
-	
-	public static void main(String[] args) {
-		Runner joe = new Runner("joe", 20);
-		joe.describeRunner();
 
+	public String toString() {
+		return "Runner " + name + " is running in " + location + " at " + startTime + ". His bib number is " + bibNumber
+				+ ".";
 	}
+
 }
-
